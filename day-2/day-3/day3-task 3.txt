@@ -1,0 +1,21 @@
+public class OverloadingExample {
+  public void sum(int a, int b) {
+        int result = a + b;
+        System.out.println("Sum of integers: " + result);
+    }
+ public void sum(double a, double b) {
+        double result = a + b;
+        System.out.println("Sum of doubles: " + result);
+    }
+ public void sim(int a, int b) {
+        System.out.println("sim method called with: " + a + " and " + b);
+    }
+
+    public static void main(String[] args) {
+        OverloadingExample obj = new OverloadingExample();
+
+        obj.sum(10, 20);         
+        obj.sum(10.5, 20.7);    
+        obj.sim(5, 6);        
+    }
+}

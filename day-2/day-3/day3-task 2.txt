@@ -1,0 +1,59 @@
+class Employee {
+    String name;
+
+    Employee(String name) {
+        this.name = name;
+}
+double calculatePay() {
+        return 0;
+    }
+}
+class FullTimeEmployee extends Employee {
+    double fixedSalary;
+    FullTimeEmployee(String name, double fixedSalary) {
+        super(name);
+        this.fixedSalary = fixedSalary;
+    }
+double calculatePay() {
+        return fixedSalary;
+    }
+}
+class PartTimeEmployee extends Employee {
+    double hourlyRate;
+    int hoursWorked;
+
+    PartTimeEmployee(String name, double hourlyRate, int hoursWorked) {
+        super(name);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+    }
+double calculatePay() {
+        return hourlyRate * hoursWorked;
+    }
+}
+class Freelancer extends Employee {
+    double hourlyRate;
+    int hoursWorked;
+    double bonus;
+    Freelancer(String name, double hourlyRate, int hoursWorked, double bonus) {
+        super(name);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+        this.bonus = bonus;
+    }
+    double calculatePay() {
+        return (hourlyRate * hoursWorked) + bonus;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee alice = new FullTimeEmployee("Alice", 5000);
+        Employee bob = new PartTimeEmployee("Bob", 20, 80);
+        Employee charlie = new Freelancer("Charlie", 30, 100, 500);
+
+        System.out.println(alice.name + "'s pay: $" + alice.calculatePay());
+        System.out.println(bob.name + "'s pay: $" + bob.calculatePay());
+        System.out.println(charlie.name + "'s pay: $" + charlie.calculatePay());
+    }
+}
