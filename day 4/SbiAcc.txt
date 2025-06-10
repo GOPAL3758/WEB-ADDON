@@ -1,0 +1,55 @@
+package day4;
+
+import java.security.PublicKey;
+
+class sbiAcc{
+	private String Accholder;
+	private int Balance;
+	
+	sbiAcc(String Accholder,int Balance){
+		this.Accholder=Accholder;
+		this.Balance=Balance;
+
+	}
+	public String getAccholder() {
+		return Accholder;
+	}
+	public int getBalance() {
+		return Balance;
+	}
+	public void deposit(int dep) {
+		if(Balance > 0) {
+			Balance+=dep;
+			System.out.println("deposit:"+dep);
+			System.out.println("now current balance:"+Balance);
+		}
+	}
+		public void setAccholder(String Accholder) {
+			this.Accholder=Accholder;
+		}
+		public void withdraw(int drawn) {
+			if(Balance>drawn) {
+				Balance-=drawn;
+			
+				System.out.println("withdrawn:"+drawn);
+				System.out.println("current balance:"+Balance);
+			}
+			else {
+				System.out.println("insufficent balance");
+			}
+		}
+	
+}
+public class bank {
+
+	public static void main(String[] args) {
+		sbiAcc ac=new sbiAcc("bharath",20000);
+		ac.setAccholder("Bharth.A");
+		System.out.println("updated name"+ac.getAccholder());
+		System.out.println("your name is:"+ac.getAccholder());
+		System.out.println("your balanceis:"+ac.getBalance());
+		ac.deposit(3000);
+		ac.withdraw(1000);
+	}
+
+}
