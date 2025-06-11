@@ -1,0 +1,41 @@
+package program;
+
+class students{
+private String name;
+private int Mark;
+students(String name , int Mark){
+this.name=name;
+
+}
+public String getname() {
+return name;
+}
+public int getMark() {
+return Mark;
+}
+public void getResult(int Mark) {
+if(Mark>0) {
+Mark+=Mark;
+System.out.println("Result:" +Mark);
+}
+}
+public void setname(String name) {
+this.name=name;
+}
+public void setMark(int Mark) {
+this.Mark=Mark;
+}
+
+public class Mark {
+
+public static void main(String[] args) {
+students in=new students("Harish",65);
+System.out.println("Student name :"+in.getname());
+in.setMark(300);
+System.out.println("Student Mark :"+in.getMark());
+
+
+
+}
+
+}}
