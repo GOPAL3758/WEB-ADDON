@@ -26,3 +26,20 @@ public class Main {
         }
     }
 }
+
+
+example 3: (using string)
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            String[] Brothers = {"Devesh","Aswin","Lokesh"};
+            System.out.println(Brothers[2]);
+        } catch (Exception e) {
+           // int[] myNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            System.out.println("something went wrong."); 
+        }finally{
+            System.out.println("the 'try catch' is finished.");
+        }
+    }
+}
