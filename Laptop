@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Laptop{
+    String model;
+    int RAM;
+
+   
+    public Laptop(String model,int RAM )
+    {
+    this.model=model;
+    this.RAM=RAM;
+    }
+    public void display(){
+        System.out.println("model:"+model);
+        System.out.println("RAM"+RAM+"gb");
+    }
+
+   
+    public static void main(String[] args){
+        Laptop a=new Laptop("VICTUS",16);
+        a.display();
+    }
+}
