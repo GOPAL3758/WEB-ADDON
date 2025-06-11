@@ -1,3 +1,5 @@
+example 1:
+
 public class Main {
     public static void main(String[] args) {
         try {
@@ -6,6 +8,21 @@ public class Main {
         } catch (Exception l) {
             int[] myNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             System.out.println(myNumbers[2]); 
+        }
+    }
+}
+
+example 2:
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int[] myNumbers = {1, 2, 3};
+            System.out.println(myNumbers[10]);
+        } catch (Exception e) {
+            System.out.println("something went wrong."); 
+        }finally{
+            System.out.println("the 'try catch' is finished.");
         }
     }
 }
