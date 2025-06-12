@@ -1,0 +1,23 @@
+import java.io.*;
+
+public class SimpleFileHandling {
+    public static void main(String[] args) {
+        String inputFile = "students_marks.txt";
+        String outputFile = "result.txt";
+        int total = 0;
+        int count = 0;
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                total += Integer.parseInt(parts[1].trim());
+                count++;
+            }
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+            return;
+        }
+
+       
+    }
+}
