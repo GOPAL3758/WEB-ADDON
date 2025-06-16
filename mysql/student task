@@ -1,0 +1,33 @@
+create table student2( 
+  name varchar(20), 
+  age int(10), 
+  rollno int(10) 
+   ); 
+
+insert into student2(name,age,rollno) 
+values('babu',10,232224), 
+('hema',10,232212), 
+('dani',10,232224);
+
+
+create  table student1(
+  sname varchar(40),
+  srollno int,
+  semail varchar(30),
+  snum int,
+  sdep varchar(40)
+);
+
+
+
+insert into student1(sname,srollno,semail,snum,sdep)
+values('sneha',2000,'sneha@gmail.com',823344678,'bca');
+insert into student1(sname,srollno,semail,snum,sdep)
+values('hari',2000,'hari@gmail.com',9122336765,'bba');
+insert into student1(sname,srollno,semail,snum,sdep)
+values('hema',2300,'hema@gmail.com',917733789,'bca');
+
+insert into student1(sname,srollno,semail,snum,sdep)
+values('sumi',2000,'sumi@gmail.com',8765447656,'bca');
+insert into student1(sname,srollno,semail,snum,sdep)
+values('pavi',2000,'pavi@gmail.com',9753288456,'bba');
