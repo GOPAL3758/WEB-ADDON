@@ -1,0 +1,13 @@
+CREATE TABLE Employee (
+    empid INT PRIMARY KEY,
+    name VARCHAR(25),
+    department VARCHAR(25),
+    salary INT,
+    joindate DATE
+);
+
+INSERT INTO Employee (empid, name, department, salary, joindate) VALUES
+(1, 'Devesh', 'BCA C', 45000, '2025-03-20'),
+(2, 'Lokesh', 'BCA B', 45000, '2025-01-25'),
+(3, 'Aswin', 'BCA C', 45000, '2025-04-28'),
+(4, 'Rithick', 'BCA A', 45000, '2025-07-30');
