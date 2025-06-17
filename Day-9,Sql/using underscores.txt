@@ -1,0 +1,11 @@
+
+mysql> select sal
+    -> from emp
+    -> where sal like'__' at line 1
+mysql> +--------+
+    -> | sal    |
+    -> +--------+
+    -> | 800.00 |
+    -> | 950.00 |
+    -> +--------+
+    -> 2 rows in set
