@@ -1,0 +1,15 @@
+CREATE TABLE books(
+    s_no INT,
+    bookname VARCHAR(20),
+    bookauthor VARCHAR(20)
+);
+
+INSERT INTO books(s_no, bookname, bookauthor)
+VALUES
+    (1, 'WEB', 'aswin'),
+    (2, 'IMS', 'rishi'),
+    (3, 'MAYA', 'Lokesh');
+
+SELECT *
+FROM books
+WHERE bookname LIKE 'w%b';

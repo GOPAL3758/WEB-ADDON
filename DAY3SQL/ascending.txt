@@ -1,0 +1,19 @@
+ create table course(
+    ->       user id  varchar(20),
+    ->       coursename varchar(20),
+    ->        fees int
+    -> );
+ insert into course(user_id,coursename,fees)
+    ->      values('Aswin','WEB',50000),
+    ->      ('Rishi','IMS',60000),
+    ->      ('Lokesh','MAYA',90000);
+ SELECT *
+    -> FROM course
+    -> ORDER BY fees ASC;
++---------+------------+-------+
+| user_id | coursename | fees  |
++---------+------------+-------+
+| Aswin   | WEB        | 50000 |
+| Rishi   | IMS        | 60000 |
+| Lokesh  | MAYA       | 90000 |
++---------+------------+-------+

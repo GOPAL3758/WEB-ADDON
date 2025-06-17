@@ -1,0 +1,39 @@
+ create table students(
+    ->   Name varchar(20),
+    ->   Subject varchar(20),
+    ->   Mark int
+    ->    );
+
+
+mysql> insert into students(Name,Subject,Mark)
+    -> values('Aswin','English',50),
+    -> ('Rishi','English',50),
+    -> ('Lokesh','English',90);
+
+
+
+mysql> select*
+    -> from students
+    -> ;
++--------+---------+------+
+| Name   | Subject | Mark |
++--------+---------+------+
+| Aswin  | English |   50 |
+| Rishi  | English |   50 |
+| Lokesh | English |   90 |
++--------+---------+------+
+
+
+mysql> SELECT *
+    -> FROM students
+    -> WHERE marks > 80;
+
+mysql> SELECT *
+    -> FROM students
+    -> WHERE mark > 80;
++--------+---------+------+
+| Name   | Subject | Mark |
++--------+---------+------+
+| Lokesh | English |   90 |
++--------+---------+------+
+1 row in set (0.00 sec)
