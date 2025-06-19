@@ -1,0 +1,29 @@
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(100)
+);
+INSERT INTO Students (student_id, name) VALUES
+(1, 'Lokesh'),
+(2, 'Devesh'),
+(3, 'Aswin');
+
+CREATE TABLE Marks (
+    mark_id INT PRIMARY KEY,
+    student_id INT,
+    subject VARCHAR(100),
+    marks INT,
+    FOREIGN KEY (student_id) REFERENCES Students(student_id)
+);
+
+INSERT INTO Marks (mark_id, student_id, subject, marks) VALUES
+(1, 1, 'Math', 85),
+(2, 2, 'Science', 78),
+(3, 3, 'English', 90);
+
+SELECT 
+    Students.student_id,
+    Students.name,
+    Marks.subject,
+    Marks.marks
+FROM Students
+INNER JOIN Marks ON Students.student_id = Marks.student_id;
